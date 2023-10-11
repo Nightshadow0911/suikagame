@@ -5,11 +5,11 @@ using UnityEngine;
 public class Collision7 : MonoBehaviour
 {
     public GameObject ball8; // ball2 프리팹
-    public int indexNumber = 1;
+    static int indexNumber = 1;
     private GameObject currentObject;
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ball1"))
+        if (collision.gameObject.CompareTag("ball7"))
         {
             // 현재 물체와 충돌한 물체의 이름에서 숫자를 추출
             int currentObjectNumber = GetNumberFromName(gameObject.name);

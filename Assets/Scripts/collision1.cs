@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collision1 : MonoBehaviour
 {
     public GameObject ball2; // ball2 프리팹
-    public int indexNumber = 1;
+    static int indexNumber = 1;
     private GameObject currentObject;
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -44,14 +44,16 @@ public class Collision1 : MonoBehaviour
 
     void BigHandleCollisionBall1(Collision2D collision)
     {
-        // 현재 물체를 파괴
-        Destroy(gameObject);
-        GameObject newObject = Instantiate(ball2, collision.contacts[0].point, Quaternion.identity);
-
         indexNumber++; // 인덱스를 증가시키는 대신 이전 인덱스를 그대로 사용
+        // 현재 물체를 파괴
+        
+        GameObject newObject = Instantiate(ball2, collision.contacts[0].point, Quaternion.identity);
         newObject.name = "Object" + indexNumber;
         currentObject = newObject;
+        Debug.Log(indexNumber);
+        Destroy(gameObject);
     }
+
     void SmallHandleCollisionBall1(Collision2D collision)
     {
         // 현재 물체를 파괴

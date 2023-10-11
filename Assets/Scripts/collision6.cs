@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collision6 : MonoBehaviour
 {
     public GameObject ball7; // ball2 ÇÁ¸®ÆÕ
-    public int indexNumber = 1;
+    static int indexNumber = 1;
     private GameObject currentObject;
     void OnCollisionEnter2D(Collision2D collision)
     {
