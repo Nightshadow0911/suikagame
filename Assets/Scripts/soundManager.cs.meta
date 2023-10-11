@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f8d7ed19ce5954b418127c4204f65dce
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _bgmSource: {instanceID: 0}
+  - game_bgm: {fileID: 8300000, guid: 45e5676f54d0b1e4a978360cc2229c9d, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
