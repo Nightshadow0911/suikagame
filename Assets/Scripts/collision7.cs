@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collision1 : MonoBehaviour
+public class Collision7 : MonoBehaviour
 {
-    public GameObject ball2; // ball2 프리팹
+    public GameObject ball8; // ball2 프리팹
     public int indexNumber = 1;
     private GameObject currentObject;
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ball1"))
@@ -19,7 +18,7 @@ public class Collision1 : MonoBehaviour
             // 숫자를 비교하여 더 큰 쪽의 물체만 처리
             if (currentObjectNumber > otherObjectNumber)
             {
-                indexNumber++; // 인덱스를 증가시킴
+                indexNumber++;
                 BigHandleCollisionBall1(collision);
             }
             if(currentObjectNumber < otherObjectNumber)
@@ -46,9 +45,7 @@ public class Collision1 : MonoBehaviour
     {
         // 현재 물체를 파괴
         Destroy(gameObject);
-        GameObject newObject = Instantiate(ball2, collision.contacts[0].point, Quaternion.identity);
-
-        indexNumber++; // 인덱스를 증가시키는 대신 이전 인덱스를 그대로 사용
+        GameObject newObject = Instantiate(ball8, collision.contacts[0].point, Quaternion.identity);
         newObject.name = "Object" + indexNumber;
         currentObject = newObject;
     }

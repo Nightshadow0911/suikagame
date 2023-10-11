@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collision1 : MonoBehaviour
+public class Collision2 : MonoBehaviour
 {
-    public GameObject ball2; // ball2 프리팹
+    public GameObject ball3; // ball2 프리팹
     public int indexNumber = 1;
     private GameObject currentObject;
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ball1"))
+        if (collision.gameObject.CompareTag("ball2"))
         {
             // 현재 물체와 충돌한 물체의 이름에서 숫자를 추출
             int currentObjectNumber = GetNumberFromName(gameObject.name);
@@ -20,11 +19,11 @@ public class Collision1 : MonoBehaviour
             if (currentObjectNumber > otherObjectNumber)
             {
                 indexNumber++; // 인덱스를 증가시킴
-                BigHandleCollisionBall1(collision);
+                BigHandleCollisionBall(collision);
             }
             if(currentObjectNumber < otherObjectNumber)
             {
-                SmallHandleCollisionBall1(collision);
+                SmallHandleCollisionBall(collision);
             }
         }
     }
@@ -42,17 +41,16 @@ public class Collision1 : MonoBehaviour
         return number;
     }
 
-    void BigHandleCollisionBall1(Collision2D collision)
+    void BigHandleCollisionBall(Collision2D collision)
     {
         // 현재 물체를 파괴
         Destroy(gameObject);
-        GameObject newObject = Instantiate(ball2, collision.contacts[0].point, Quaternion.identity);
-
-        indexNumber++; // 인덱스를 증가시키는 대신 이전 인덱스를 그대로 사용
+        GameObject newObject = Instantiate(ball3, collision.contacts[0].point, Quaternion.identity);
         newObject.name = "Object" + indexNumber;
         currentObject = newObject;
+        
     }
-    void SmallHandleCollisionBall1(Collision2D collision)
+    void SmallHandleCollisionBall(Collision2D collision)
     {
         // 현재 물체를 파괴
         Destroy(gameObject);

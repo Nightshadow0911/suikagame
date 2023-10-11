@@ -17,7 +17,6 @@ public class spawnerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
             Vector3 currentScale = playerSpawner.localScale;
             float spawnerHalfLength = currentScale.x / 2f;
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

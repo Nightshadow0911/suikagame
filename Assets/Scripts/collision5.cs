@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collision1 : MonoBehaviour
+public class Collision5 : MonoBehaviour
 {
-    public GameObject ball2; // ball2 프리팹
+    public GameObject ball6; // ball2 프리팹
     public int indexNumber = 1;
     private GameObject currentObject;
-
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ball1"))
+        if (collision.gameObject.CompareTag("ball5"))
         {
             // 현재 물체와 충돌한 물체의 이름에서 숫자를 추출
             int currentObjectNumber = GetNumberFromName(gameObject.name);
@@ -46,11 +45,10 @@ public class Collision1 : MonoBehaviour
     {
         // 현재 물체를 파괴
         Destroy(gameObject);
-        GameObject newObject = Instantiate(ball2, collision.contacts[0].point, Quaternion.identity);
-
-        indexNumber++; // 인덱스를 증가시키는 대신 이전 인덱스를 그대로 사용
+        GameObject newObject = Instantiate(ball6, collision.contacts[0].point, Quaternion.identity);
         newObject.name = "Object" + indexNumber;
         currentObject = newObject;
+
     }
     void SmallHandleCollisionBall1(Collision2D collision)
     {

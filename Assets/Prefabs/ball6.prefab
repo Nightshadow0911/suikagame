@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9061682526699559318}
   - component: {fileID: 5779995232952111926}
   - component: {fileID: 1602990717480422120}
+  - component: {fileID: 6614588381749057826}
   m_Layer: 0
   m_Name: ball6
   m_TagString: ball6
@@ -148,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6614588381749057826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7384019942624499510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c35099d3a73c4445bb57354062f6a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball7: {fileID: 2706452997114240937, guid: 95912f442815f5c4683b5294b171660d, type: 3}
