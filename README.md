@@ -21,9 +21,8 @@ B04 조병우
     
 int GetNumberFromName(string name)
     {
-        // 이름에서 숫자를 추출 (예: "Object123"에서 123 추출)
         int number = 0;
-        int startIndex = name.IndexOf("Object") + 6; // "Object" 다음부터 숫자 추출
+        int startIndex = name.IndexOf("Object") + 6;
         if (startIndex >= 0)
         {
             string numberStr = name.Substring(startIndex);
@@ -33,9 +32,7 @@ int GetNumberFromName(string name)
     }
     void BigHandleCollisionBall1(Collision2D collision)
     {
-        indexNumber++; // 인덱스를 증가시키는 대신 이전 인덱스를 그대로 사용
-        // 현재 물체를 파괴
-        
+        indexNumber++;
         GameObject newObject = Instantiate(ball2, collision.contacts[0].point, Quaternion.identity);
         newObject.name = "Object" + indexNumber;
         currentObject = newObject;
@@ -45,7 +42,6 @@ int GetNumberFromName(string name)
 
     void SmallHandleCollisionBall1(Collision2D collision)
     {
-        // 현재 물체를 파괴
         Destroy(gameObject);
     }
 }
