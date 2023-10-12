@@ -17,7 +17,8 @@ B04 조병우
 마우스가 움직이면 클릭하기 전까지 공이 마우스를 따라 좌우로 이동하여 원하는 위치에서 클릭시 공이 떨어지기 시작.
 
 같은 태그를 달고있는 공이 부딪히면 모든 공에 인덱스 번호가 부여되어 있어 두 공은 모두 파괴된 후 다음 공을 하나만 생성.
-    int GetNumberFromName(string name)
+    
+int GetNumberFromName(string name)
     {
         // 이름에서 숫자를 추출 (예: "Object123"에서 123 추출)
         int number = 0;
