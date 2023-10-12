@@ -30,6 +30,7 @@ int GetNumberFromName(string name)
         }
         return number;
     }
+    
     void BigHandleCollisionBall1(Collision2D collision)
     {
         indexNumber++;
