@@ -31,7 +31,6 @@ int GetNumberFromName(string name)
         }
         return number;
     }
-
     void BigHandleCollisionBall1(Collision2D collision)
     {
         indexNumber++; // 인덱스를 증가시키는 대신 이전 인덱스를 그대로 사용
